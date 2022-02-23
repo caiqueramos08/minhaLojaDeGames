@@ -12,13 +12,12 @@ import javax.validation.constraints.Size;
 @Table(name = "cliente")
 public class Cliente {
 
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
 	@NotNull
-	@Size(min = 5, max = 100)
+	@Size(min = 1, max = 100)
 	private String nome;
 
 	public long getId() {

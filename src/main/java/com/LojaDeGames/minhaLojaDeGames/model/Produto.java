@@ -10,7 +10,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table (name = "produto")
-public class produto 
+public class Produto 
 {
 	
 	@Id
