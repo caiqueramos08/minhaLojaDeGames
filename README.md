@@ -9,5 +9,6 @@ Minha Loja de Games é um exemplo de **CRUD** com **Java Spring Boot** criado pe
 * [Raiza de Paula](https://github.com/raizapaula93);
 * [Samuel Santos](https://github.com/Sam-Pina);
 * [Guilherme Petry](https://github.com/petry078/);
+* [Caique Ramos](https://github.com/caiqueramos08);
 
 Obrigado.
