@@ -20,7 +20,7 @@ import com.LojaDeGames.minhaLojaDeGames.repository.ClienteRepository;
 
 @RestController
 @RequestMapping("/cliente")
-@CrossOrigin("*")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ClienteController {
 
 	@Autowired
@@ -30,7 +30,7 @@ public class ClienteController {
 	public ResponseEntity<List<Cliente>> getAll(){
 		return ResponseEntity.ok(repository.findAll());
 	}
-	  @GetMapping("/{id}")
+	@GetMapping("/{id}")
 	public ResponseEntity<Cliente> GetById(@PathVariable long id){
 		return repository.findById(id)
 				.map(resp -> ResponseEntity.ok(resp))
@@ -42,12 +42,12 @@ public class ClienteController {
 		return ResponseEntity.ok(repository.findAllByEmailContainingIgnoreCase(email));
 	}
 	 
-	  @PostMapping
+	@PostMapping
     public ResponseEntity<Cliente> post (@RequestBody Cliente cliente){
     	return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(cliente));
     }
     
-     @PutMapping
+    @PutMapping
     public ResponseEntity<Cliente> put (@RequestBody Cliente cliente){
     	return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(cliente));
     }
