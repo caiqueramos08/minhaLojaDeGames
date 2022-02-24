@@ -25,41 +25,7 @@ public class ProdutoController {
 	
 	@Autowired
 	private ProdutoRepository repository;
-	
-	/**
-	 * @GetMapping
-	public ResponseEntity<List<Cliente>> getAll(){
-		return ResponseEntity.ok(repository.findAll());
-	}
-	 * @GetMapping("/{id}")
-	public ResponseEntity<Cliente> GetById(@PathVariable long id){
-		return repository.findById(id)
-				.map(resp -> ResponseEntity.ok(resp))
-				.orElse(ResponseEntity.notFound().build());
-	}
-	
-	@GetMapping("email/{email}")
-	public ResponseEntity<List<Cliente>> GetByEmail(@PathVariable String email){
-		return ResponseEntity.ok(repository.findAllByEmailContainingIgnoreCase(email));
-	}
-	 * 
-	 * @PostMapping
-    public ResponseEntity<Cliente> post (@RequestBody Cliente cliente){
-    	return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(cliente));
-    }
-    
-     @PutMapping
-    public ResponseEntity<Cliente> put (@RequestBody Cliente cliente){
-    	return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(cliente));
-    }
-    
-    @DeleteMapping("/{id}")
-	public void delete(@PathVariable long id){
-		repository.deleteById(id);
-	}
-	 * 
-	 */
-	
+			
 	@GetMapping
 	public ResponseEntity<List<Produto>> getAll(){
 		return ResponseEntity.ok(repository.findAll());
